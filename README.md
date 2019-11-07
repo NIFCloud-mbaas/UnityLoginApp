@@ -13,9 +13,10 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS X 10.11.5(EI Capitan)
-* Unity ver. 5.2.1f1
-* MonoDevelop-Unity ver. 4.0.1
+* MacOS Mojave v10.14.6 (18G103)
+* Android studio: 3.4.1
+* Simulator: Pixel 2 Android OS Version 10
+* Unity 2019.1.14f1
 
 ※上記内容で動作確認をしています。
 
