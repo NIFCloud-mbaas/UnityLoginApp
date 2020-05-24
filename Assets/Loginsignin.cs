@@ -42,7 +42,7 @@ public class Loginsignin : MonoBehaviour
 #if UNITY_2019_3_OR_NEWER
 				SceneManager.LoadScene("LogOut");
 #else
-				Application.LoadLevel ("LogOut");
+				Application.LoadLevel("LogOut");
 #endif
 			}
 		});
@@ -71,7 +71,7 @@ public class Loginsignin : MonoBehaviour
 #if UNITY_2019_3_OR_NEWER
 				SceneManager.LoadScene("LogOut");
 #else
-				Application.LoadLevel ("LogOut");
+				Application.LoadLevel("LogOut");
 #endif
 			}
 		});
