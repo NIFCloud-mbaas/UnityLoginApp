@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 using NCMB;
+#if UNITY_2019_3_OR_NEWER
+using UnityEngine.SceneManagement;
+#endif
 
 //private InputField UserName;
 //private InputField PassWord;
@@ -24,8 +27,8 @@ public class Loginsignin : MonoBehaviour
 
 	public void Login ()
 	{
-		print (UserName.text);
-		print (PassWord.text);
+		Debug.Log(UserName.text);
+		Debug.Log(PassWord.text);
 
 		//NCMBUserのインスタンス作成 
 		NCMBUser user = new NCMBUser ();
@@ -36,7 +39,11 @@ public class Loginsignin : MonoBehaviour
 				UnityEngine.Debug.Log ("ログインに失敗: " + e.ErrorMessage);
 			} else {
 				UnityEngine.Debug.Log ("ログインに成功！");
-				Application.LoadLevel ("LogOut");
+#if UNITY_2019_3_OR_NEWER
+				SceneManager.LoadScene("LogOut");
+#else
+				Application.LoadLevel("LogOut");
+#endif
 			}
 		});
 
@@ -44,8 +51,8 @@ public class Loginsignin : MonoBehaviour
 
 	public void Signin ()
 	{
-		print (UserName.text);
-		print (PassWord.text);
+		Debug.Log(UserName.text);
+		Debug.Log(PassWord.text);
 
 
 		//NCMBUserのインスタンス作成 
@@ -61,7 +68,11 @@ public class Loginsignin : MonoBehaviour
 				UnityEngine.Debug.Log ("新規登録に失敗: " + e.ErrorMessage);
 			} else {
 				UnityEngine.Debug.Log ("新規登録に成功");
-				Application.LoadLevel ("LogOut");
+#if UNITY_2019_3_OR_NEWER
+				SceneManager.LoadScene("LogOut");
+#else
+				Application.LoadLevel("LogOut");
+#endif
 			}
 		});
 
